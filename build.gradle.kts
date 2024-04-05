@@ -12,6 +12,14 @@ repositories {
     mavenCentral()
 }
 
+sourceSets {
+    main {
+        java {
+            srcDir("src")
+        }
+    }
+}
+
 dependencies {
     compileOnly("org.projectlombok:lombok:1.18.32")
 }
