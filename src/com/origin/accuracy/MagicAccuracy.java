@@ -2,6 +2,7 @@ package com.origin.accuracy;
 
 import com.origin.accuracy.provider.*;
 import lombok.Getter;
+import lombok.NonNull;
 import lombok.Setter;
 
 public final class MagicAccuracy implements AbstractAccuracy {
@@ -15,19 +16,19 @@ public final class MagicAccuracy implements AbstractAccuracy {
     RSEntity defender;
     RSCombatType combatType;
 
-    public MagicAccuracy(RSEntity attacker, RSEntity defender, RSCombatType combatType) {
+    public MagicAccuracy(@NonNull RSEntity attacker, @NonNull RSEntity defender, RSCombatType combatType) {
         this.attacker = attacker;
         this.defender = defender;
         this.combatType = combatType;
     }
 
     @Override
-    public RSEntity attacker() {
+    public @NonNull RSEntity attacker() {
         return this.attacker;
     }
 
     @Override
-    public RSEntity defender() {
+    public @NonNull RSEntity defender() {
         return this.defender;
     }
 
@@ -82,7 +83,7 @@ public final class MagicAccuracy implements AbstractAccuracy {
     }
 
     @Override
-    public int getDefenceRoll() {
+    public int getDefenceRoll() throws RuntimeException {
         double prayer = this.getPrayerBonusDefender();
         int defenceLevel = (int) Math.floor(this.getDefensiveSKillLevelDefender() * prayer);
         int bonus = this.getEquipmentBonusForDefender();

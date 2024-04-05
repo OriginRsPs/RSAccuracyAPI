@@ -3,26 +3,32 @@ package com.origin.accuracy;
 import com.origin.accuracy.provider.RSCombatType;
 import com.origin.accuracy.provider.RSEntity;
 import lombok.Getter;
+import lombok.NonNull;
 import lombok.Setter;
 
 public class RangeAccuracy implements AbstractAccuracy {
 
-    @Getter @Setter public int modifier;
-    @Getter @Setter RSEntity attacker, defender;
+    @Getter
+    @Setter
+    public int modifier;
+    @Getter
+    @Setter
+    @NonNull RSEntity attacker, defender;
     RSCombatType combatType;
-    public RangeAccuracy(RSEntity attacker, RSEntity defender, RSCombatType combatType) {
+
+    public RangeAccuracy(@NonNull RSEntity attacker, @NonNull RSEntity defender, RSCombatType combatType) {
         this.attacker = attacker;
         this.defender = defender;
         this.combatType = combatType;
     }
 
     @Override
-    public RSEntity attacker() {
+    public @NonNull RSEntity attacker() {
         return this.attacker;
     }
 
     @Override
-    public RSEntity defender() {
+    public @NonNull RSEntity defender() {
         return this.defender;
     }
 

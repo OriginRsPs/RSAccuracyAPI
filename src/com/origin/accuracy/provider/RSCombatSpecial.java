@@ -1,6 +1,6 @@
 package com.origin.accuracy.provider;
 
 public interface RSCombatSpecial {
-    Class<?> get();
+    RSCombatSpecial get();
     double getAccuracyMultiplier();
 }
