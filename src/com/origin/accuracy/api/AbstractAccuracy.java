@@ -1,8 +1,4 @@
-package com.origin.accuracy;
-
-import com.origin.accuracy.provider.RSCombatType;
-import com.origin.accuracy.provider.RSEntity;
-import com.origin.accuracy.provider.RSPlayer;
+package com.origin.accuracy.api;
 
 /**
  * AbstractAccuracy interface represents the accuracy of an attack in a combat scenario

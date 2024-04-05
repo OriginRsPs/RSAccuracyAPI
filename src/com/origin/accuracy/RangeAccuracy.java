@@ -1,7 +1,8 @@
 package com.origin.accuracy;
 
-import com.origin.accuracy.provider.RSCombatType;
-import com.origin.accuracy.provider.RSEntity;
+import com.origin.accuracy.api.AbstractAccuracy;
+import com.origin.accuracy.api.RSCombatType;
+import com.origin.accuracy.api.RSEntity;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;

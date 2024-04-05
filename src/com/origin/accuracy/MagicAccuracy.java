@@ -1,6 +1,6 @@
 package com.origin.accuracy;
 
-import com.origin.accuracy.provider.*;
+import com.origin.accuracy.api.*;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
